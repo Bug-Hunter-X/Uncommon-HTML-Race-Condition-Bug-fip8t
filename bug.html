@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Uncommon HTML Bug</title>
+</head>
+<body>
+  <div id="myDiv">
+    This text will be replaced.
+  </div>
+
+  <script>
+    // Incorrect attempt to select an element that hasn't been fully parsed yet
+    document.getElementById("myDiv").innerHTML = "<b>This text replaces the original.</b>";
+  </script>
+</body>
+</html>
