@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Uncommon HTML Bug Solution</title>
+</head>
+<body>
+  <div id="myDiv">
+    This text will be replaced.
+  </div>
+
+  <script>
+    // Using DOMContentLoaded to ensure the element exists before manipulation
+    document.addEventListener('DOMContentLoaded', function() {
+      document.getElementById("myDiv").innerHTML = "<b>This text replaces the original.</b>";
+    });
+  </script>
+</body>
+</html>
